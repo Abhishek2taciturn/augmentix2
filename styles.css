@@ -1,0 +1,275 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0c0a0a;
+    color: #fff;
+    padding: 1em;
+}
+
+
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.welcome-section {
+    position: relative;
+    text-align: center;
+    background-color: #f3f3f3f4;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.welcome-text {
+    position: relative;
+    animation: slideText 7s linear infinite; /* Adjust the animation duration as needed */
+}
+
+@keyframes slideText {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left */
+    }
+}
+
+.additional-section {
+    background-color: #030303;
+    color: #fff;
+    padding: 5px;
+}
+
+.background-video {
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.background-video video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.video-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    opacity: 0; /* Initial opacity set to 0 */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity changes */
+}
+.video-overlay-text.visible {
+    opacity: 1; /* Opacity set to 1 when the 'visible' class is present */
+}
+
+.video-overlay-text h2,
+.video-overlay-text p {
+    margin: 0;
+    padding: 5px;
+}
+
+/* ... (previous styles) */
+
+.vertical-section {
+    width: 90%;
+    height: 50vh;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 3px double #0b0a0a; /* Double top border */
+    border-bottom: 3px double #090909; /* Double bottom border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a002ef4;
+  
+}
+
+/* ... (previous styles) */
+
+#section3 {
+    width: 90%;
+    height: 50vh;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 4px double #0b0a0a; /* Double top border */
+    border-bottom: 4px double #090909; /* Double bottom border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.vertical-section h2 {
+    font-size: 2em;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-content p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Ensure content is on the right */
+.section-content {
+    flex-direction: row-reverse;
+}
+.vertical-section img {
+    max-width: 100px; /* Adjust the maximum width of the images */
+    margin-right: 20px; /* Adjust the margin as needed */
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 0.5em 0;  /* Adjust the padding to make the navbar shorter */
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em; /* You can adjust the font size as needed */
+    font-weight: bold;
+}
+
+.logo img {
+    max-height: 80px; /* Set the max height to match the navbar height */
+    width: auto; /* Automatically adjust width based on height */
+    margin: 0; /* Remove margin */
+}
+
+  
+
+.image-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh; /* Adjust the height as needed */
+    margin-top: 00px; /* Add margin to avoid overlapping */
+}
+
+.image-block {
+    text-align: center;
+}
+
+.image-block img {
+    max-width: 100%; /* Ensure images don't exceed their container */
+}
+
+/* Adjust styling for the titles and content as needed */
+.image-block h2 {
+    font-size: 2em;
+}
+
+.image-block p {
+    font-size: 1.2em;
+}
+
+.image-section-header {
+    font-size: large;
+    width: 90%;
+    height: 20vh;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 4px double #0b0a0a; /* Double top border */
+    border-bottom: 4px double #090909; /* Double bottom border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ... (previous styles) */
+
+.vertical-section h2,
+.vertical-section p {
+    opacity: 0; /* Initial opacity set to 0 */
+    transform: translateY(20px); /* Initial position below */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.vertical-section.in-view h2,
+.vertical-section.in-view p {
+    opacity: 1; /* Opacity set to 1 when in view */
+    transform: translateY(0); /* Move to the original position */
+}
+
+/* ... (previous styles) */
+
+/* Add this CSS to your existing stylesheet */
+
+.image-block {
+    
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.image-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-block img {
+    max-width: 100%; /* Ensure images don't exceed their container */
+    max-height: 200px; /* Set a maximum height for the images */
+    width: auto; /* Automatically adjust width based on height */
+}
+
+/* Adjust styling for the titles and content as needed */
+.image-block h2 {
+    font-size: 2em;
+}
+
+.image-block p {
+    font-size: 1.2em;
+}
